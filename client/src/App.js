@@ -12,7 +12,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/BO2" component={BO2} />
+        <Route path="/black-ops-2" component={BO2} />
         <Route path="*" component={E404} />
       </Switch>
     </Router>

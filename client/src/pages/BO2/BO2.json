@@ -1,0 +1,56 @@
+[
+  {
+    "mode": "Multiplayer",
+    "category": [
+      {
+        "name": "Perks",
+        "difficuilty": "Easy",
+        "questions": [
+          {
+            "question": "What perk makes you undetectable by AI controlled Killstreaks",
+            "options": ["Ghost", "Hard Wired", "Cold Blooded", "Hard Line"],
+            "answer": "Cold Blooded"
+          }
+        ]
+      },
+      { "name": "Guns" }
+    ]
+  },
+  {
+    "mode": "Zombies",
+    "category": [
+      {
+        "difficuilty": "Easy",
+        "questions": [
+          {
+            "question": "What perk lets you reload faster",
+            "options": [
+              "Stamina-up",
+              "Slight of Hand",
+              "Quick Revive",
+              "Speed Cola"
+            ],
+            "answer": "Speed Cola"
+          }
+        ]
+      },
+      { "name": "Guns" }
+    ]
+  },
+  {
+    "mode": "Campaign",
+    "category": [
+      {
+        "difficuilty": "Easy",
+        "questions": [
+          {
+            "question": "Who killed who?",
+            "options": ["Yes", "No", "Maybe", "Pick Me"],
+            "answer": "Yes"
+          }
+        ]
+      },
+      { "name": "Guns" }
+    ]
+  }
+]
