@@ -3,17 +3,54 @@
     "mode": "Multiplayer",
     "category": [
       {
-        "name": "Perks",
         "difficuilty": "Easy",
+        "points": 100,
         "questions": [
           {
             "question": "What perk makes you undetectable by AI controlled Killstreaks",
             "options": ["Ghost", "Hard Wired", "Cold Blooded", "Hard Line"],
             "answer": "Cold Blooded"
+          },
+          {
+            "question": "Easy Question Here",
+            "options": ["Easy", "Medium", "Hard", "Expert"],
+            "answer": "Easy"
           }
         ]
       },
-      { "name": "Guns" }
+      {
+        "difficuilty": "Medium",
+        "points": 200,
+        "questions": [
+          {
+            "question": "Medium Question Here",
+            "options": ["Easy", "Medium", "Hard", "Expert"],
+            "answer": "Medium"
+          }
+        ]
+      },
+      {
+        "difficuilty": "Hard",
+        "points": 300,
+        "questions": [
+          {
+            "question": "Hard Question Here",
+            "options": ["Easy", "Medium", "Hard", "Expert"],
+            "answer": "Hard"
+          }
+        ]
+      },
+      {
+        "difficuilty": "Expert",
+        "points": 400,
+        "questions": [
+          {
+            "question": "Expert Question Here",
+            "options": ["Easy", "Medium", "Hard", "Expert"],
+            "answer": "Expert"
+          }
+        ]
+      }
     ]
   },
   {
@@ -21,7 +58,18 @@
     "category": [
       {
         "difficuilty": "Easy",
+        "points": 100,
         "questions": [
+          {
+            "question": "What perk lets you reload faster",
+            "options": [
+              "Stamina-up",
+              "Slight of Hand",
+              "Quick Revive",
+              "Speed Cola"
+            ],
+            "answer": "Speed Cola"
+          },
           {
             "question": "What perk lets you reload faster",
             "options": [
@@ -34,7 +82,27 @@
           }
         ]
       },
-      { "name": "Guns" }
+      {
+        "difficuilty": "Hard",
+        "points": 300,
+        "questions": [
+          {
+            "question": "What wonder weapon slows down zombies, and allows you to levitate",
+            "options": ["Thunder Gun", "Paralyzer", "Wonder Waffle", "DSR"],
+            "answer": "Paralyzer"
+          },
+          {
+            "question": "What perk lets you reload faster",
+            "options": [
+              "Stamina-up",
+              "Slight of Hand",
+              "Quick Revive",
+              "Speed Cola"
+            ],
+            "answer": "Speed Cola"
+          }
+        ]
+      }
     ]
   },
   {
@@ -42,6 +110,7 @@
     "category": [
       {
         "difficuilty": "Easy",
+        "points": 100,
         "questions": [
           {
             "question": "Who killed who?",
@@ -49,8 +118,7 @@
             "answer": "Yes"
           }
         ]
-      },
-      { "name": "Guns" }
+      }
     ]
   }
 ]
