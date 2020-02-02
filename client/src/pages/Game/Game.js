@@ -7,7 +7,7 @@ import Question from "../../components/Question/Question";
 import BO2Object from "./JSON/BO2.json";
 import "./Game.css";
 
-class BO2 extends Component {
+class Game extends Component {
   state = {
     questions: "",
     game: false,
@@ -16,12 +16,12 @@ class BO2 extends Component {
   };
 
   componentDidMount() {
-    this.resetGame();
+    if (this.props.location.pathname === "/black-ops-2") {
+      this.resetGame(BO2Object);
+    }
   }
 
-  componentDidUpdate() {
-    console.log(BO2Object);
-  }
+  componentDidUpdate() {}
 
   clickedQuestion(object) {
     let questions = this.state.questions;
@@ -64,27 +64,33 @@ class BO2 extends Component {
     }
   };
 
-  resetGame() {
-    if (this.props.location.pathname === "/black-ops-2") {
-      this.setState({
-        questions: BO2Object,
-        game: false,
-        score: 0,
-        clickedQuestion: ""
+  resetGame(object) {
+    let questions = object;
+    questions.map((modeArray, i) => {
+      modeArray.category.map((array, j) => {
+        questions[i].category[j].clicked = false;
+        return ":)";
       });
-    }
+      return ":)";
+    });
+
+    this.setState({
+      questions: questions,
+      game: false,
+      score: 0,
+      clickedQuestion: ""
+    });
   }
 
   render() {
     return (
-      <div className="BO2">
+      <div className="game">
         <Container>
           <Row>
             <Col>
-              >
               <button
                 className="btn btn-danger"
-                onClick={() => this.resetGame()}
+                onClick={() => this.resetGame(this.state.questions)}
               >
                 Reset
               </button>
@@ -157,4 +163,4 @@ class BO2 extends Component {
   }
 }
 
-export default BO2;
+export default Game;
