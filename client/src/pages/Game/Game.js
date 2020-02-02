@@ -4,31 +4,52 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Question from "../../components/Question/Question";
-import BO2Object from "./BO2.json";
-import "./BO2.css";
+import BO2Object from "./JSON/BO2.json";
+import "./Game.css";
 
 class BO2 extends Component {
   state = {
-    questions: BO2Object,
+    questions: "",
     game: false,
     score: 0,
     clickedQuestion: ""
   };
 
-  componentDidMount() {}
+  componentDidMount() {
+    this.resetGame();
+  }
 
-  componentDidUpdate() {}
+  componentDidUpdate() {
+    console.log(BO2Object);
+  }
 
-  clickedQuestion(questions, points) {
-    this.setState({
-      clickedQuestion: {
-        questions: questions[Math.floor(Math.random() * questions.length)],
-        points: points
+  clickedQuestion(object) {
+    let questions = this.state.questions;
+    questions.map((modeArray, i) => {
+      if (modeArray.mode === object.mode) {
+        modeArray.category.map((difficuiltyArray, j) => {
+          if (difficuiltyArray.points === object.points) {
+            questions[i].category[j].clicked = true;
+            this.setState({
+              questions: questions,
+              clickedQuestion: {
+                questions:
+                  object.questions[
+                    Math.floor(Math.random() * object.questions.length)
+                  ],
+                points: object.points
+              }
+            });
+            return ":)";
+          }
+          return ":)";
+        });
       }
+      return ":)";
     });
   }
 
-  clickedAnswer = (boolean, points) => {
+  clickedAnswer = boolean => {
     if (boolean) {
       console.log("Correct");
       this.setState({
@@ -38,18 +59,20 @@ class BO2 extends Component {
     } else {
       console.log("Wrong");
       this.setState({
-        // score: this.state.score + this.state.clickedQuestion.points,
         clickedQuestion: ""
       });
     }
   };
 
   resetGame() {
-    this.setState({
-      // Reset questions too
-      game: false,
-      score: 0
-    });
+    if (this.props.location.pathname === "/black-ops-2") {
+      this.setState({
+        questions: BO2Object,
+        game: false,
+        score: 0,
+        clickedQuestion: ""
+      });
+    }
   }
 
   render() {
@@ -58,6 +81,7 @@ class BO2 extends Component {
         <Container>
           <Row>
             <Col>
+              >
               <button
                 className="btn btn-danger"
                 onClick={() => this.resetGame()}
@@ -82,7 +106,7 @@ class BO2 extends Component {
               points={this.state.clickedQuestion.points}
               onClick={this.clickedAnswer}
             />
-          ) : (
+          ) : this.state.questions ? (
             <>
               <Row className="game">
                 {this.state.questions.map(data => {
@@ -91,18 +115,27 @@ class BO2 extends Component {
                       <b>{data.mode}</b>
                       <hr />
                       {data.category.map(level => {
+                        if (level.clicked) {
+                          return (
+                            <>
+                              <button
+                                className="btn btn-danger"
+                                id="gameButtons"
+                                value={level.points}
+                              >
+                                {level.points}
+                              </button>
+                              <br />
+                            </>
+                          );
+                        }
                         return (
                           <>
                             <button
                               className="btn btn-primary"
-                              id={level.difficuilty}
+                              id="gameButtons"
                               value={level.points}
-                              onClick={() =>
-                                this.clickedQuestion(
-                                  level.questions,
-                                  level.points
-                                )
-                              }
+                              onClick={() => this.clickedQuestion(level)}
                             >
                               {level.points}
                             </button>
@@ -115,6 +148,8 @@ class BO2 extends Component {
                 })}
               </Row>
             </>
+          ) : (
+            <>You'll Never see this message</>
           )}
         </Container>
       </div>

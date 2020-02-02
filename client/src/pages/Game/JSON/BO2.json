@@ -3,8 +3,10 @@
     "mode": "Multiplayer",
     "category": [
       {
+        "mode": "Multiplayer",
         "difficuilty": "Easy",
         "points": 100,
+        "clicked": false,
         "questions": [
           {
             "question": "What perk makes you undetectable by AI controlled Killstreaks",
@@ -12,15 +14,32 @@
             "answer": "Cold Blooded"
           },
           {
+            "question": "You earn another loudout after what action",
+            "options": [
+              "Pay to win",
+              "Beating the campaign",
+              "Prestiging",
+              "Completing your first match"
+            ],
+            "answer": "Prestiging"
+          },
+          {
             "question": "Easy Question Here",
             "options": ["Easy", "Medium", "Hard", "Expert"],
             "answer": "Easy"
+          },
+          {
+            "question": "What is the maximum amount of custom classes you can have",
+            "options": ["5", "10", "15", "20"],
+            "answer": "10"
           }
         ]
       },
       {
+        "mode": "Multiplayer",
         "difficuilty": "Medium",
         "points": 200,
+        "clicked": false,
         "questions": [
           {
             "question": "Medium Question Here",
@@ -30,8 +49,10 @@
         ]
       },
       {
+        "mode": "Multiplayer",
         "difficuilty": "Hard",
         "points": 300,
+        "clicked": false,
         "questions": [
           {
             "question": "Hard Question Here",
@@ -41,8 +62,10 @@
         ]
       },
       {
+        "mode": "Multiplayer",
         "difficuilty": "Expert",
         "points": 400,
+        "clicked": false,
         "questions": [
           {
             "question": "Expert Question Here",
@@ -57,8 +80,10 @@
     "mode": "Zombies",
     "category": [
       {
+        "mode": "Zombies",
         "difficuilty": "Easy",
         "points": 100,
+        "clicked": false,
         "questions": [
           {
             "question": "What perk lets you reload faster",
@@ -71,35 +96,32 @@
             "answer": "Speed Cola"
           },
           {
-            "question": "What perk lets you reload faster",
+            "question": "What wonder weapon slows down zombies, and allows you to levitate",
             "options": [
-              "Stamina-up",
-              "Slight of Hand",
-              "Quick Revive",
-              "Speed Cola"
+              "Thunder Gun",
+              "Paralyzer",
+              "Wonder Waffle",
+              "Ray Gun Mk2"
             ],
-            "answer": "Speed Cola"
+            "answer": "Paralyzer"
           }
         ]
       },
       {
-        "difficuilty": "Hard",
-        "points": 300,
+        "mode": "Zombies",
+        "difficuilty": "Medium",
+        "points": 200,
+        "clicked": false,
         "questions": [
           {
-            "question": "What wonder weapon slows down zombies, and allows you to levitate",
-            "options": ["Thunder Gun", "Paralyzer", "Wonder Waffle", "DSR"],
-            "answer": "Paralyzer"
-          },
-          {
-            "question": "What perk lets you reload faster",
+            "question": "What are the names of the three robots in Origins",
             "options": [
-              "Stamina-up",
-              "Slight of Hand",
-              "Quick Revive",
-              "Speed Cola"
+              "Odin, Thor, Freya",
+              "Thor, Loki, Athena",
+              "Odin, Thor, Loki",
+              "Freya, Athena, Loki"
             ],
-            "answer": "Speed Cola"
+            "answer": "Odin, Thor, Freya"
           }
         ]
       }
@@ -109,8 +131,10 @@
     "mode": "Campaign",
     "category": [
       {
+        "mode": "Campaign",
         "difficuilty": "Easy",
         "points": 100,
+        "clicked": false,
         "questions": [
           {
             "question": "Who killed who?",
